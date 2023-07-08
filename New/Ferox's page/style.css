@@ -23,10 +23,11 @@ body {
     border-bottom: 2px solid rgb(36, 36, 36);
     margin: auto 26px;
 }
+
 .header h1 {
     color: rgb(255, 255, 255);
 }
-user agent stylesheet
+
 h1 {
     display: block;
     font-size: 2em;
@@ -36,6 +37,7 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
 .main-content {
     text-align: center;
     font-size: 1.6em;
@@ -43,9 +45,11 @@ h1 {
     padding: 20px;
     margin: auto 20%;
 }
+
 div {
     display: block;
 }
+
 .main-content h2 {
     background-color: rgba(255, 255, 255, 0.6);
     color: rgb(0, 0, 0);
@@ -55,7 +59,7 @@ div {
     padding: 10px;
     border-radius: 10px;
 }
-user agent stylesheet
+
 h2 {
     display: block;
     font-size: 1.5em;
@@ -65,10 +69,12 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
 .main-content .content-wrapper {
     display: flex;
     justify-content: space-between;
 }
+
 .contact {
     display: flex;
     justify-content: space-evenly;
@@ -77,6 +83,7 @@ h2 {
     background-color: rgb(36, 36, 36);
     padding: 15px 0px;
 }
+
 .contact-icon {
     display: flex;
     justify-content: center;
@@ -84,18 +91,19 @@ h2 {
     width: 80px;
     height: 40px;
     background-color: rgb(26, 26, 26);
-    color: rgb(179, 17, 255);
+    color: #8A2BE2;
     font-size: 2.7em;
     border-radius: 25px;
     transition: transform 0.3s ease 0s;
     padding: 15px;
 }
-user agent stylesheet
+
 a:-webkit-any-link {
-    color: -webkit-link;
+    color: #8A2BE2;
     cursor: pointer;
     text-decoration: underline;
 }
+
 .footer {
     display: flex;
     justify-content: center;
