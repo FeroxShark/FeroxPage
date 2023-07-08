@@ -2,7 +2,7 @@
 
 Welcome to the repository of my personal website! 
 
-I am Ferox, a technology enthusiast and software developer. This website serves as a hub for showcasing my work, interests and how to contact me.
+I am Ferox, A technology enthusiast, high school student and software developer. This website serves as a hub for showcasing my work, interests and how to contact me.
 
 ## Features
 
