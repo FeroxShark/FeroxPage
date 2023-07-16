@@ -82,3 +82,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Geolocalización
+    navigator.geolocation.getCurrentPosition(success, error);
+});
+
+function success(pos) {
+    let latitude = pos.coords.latitude;
+    let longitude = pos.coords.longitude;
+    weather(latitude, longitude);
+}
+
+function error() {
+    console.log('No se pudo obtener tu ubicación');
+}
+
+function weather(latitude, longitude) {
+    let apiKey = 'ef8aa2ae04a3ab8b24e76340323c6d0c'; // Inserta tu API Key aquí
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        let tempC = Math.round(data.main.temp);
+        let tempF = Math.round((tempC * 9/5) + 32);
+
+        document.getElementById('location').innerHTML = `${data.name}, ${data.sys.country}`;
+        document.getElementById('temp').innerHTML = `${tempC}°C | ${tempF}°F <i id="weather-icon" class="wi wi-owm-${data.weather[0].id}"></i>`;
+    })
+    .catch(error => {
+        console.log('Hubo un error al obtener los datos del clima: ', error);
+    });
+
+}
