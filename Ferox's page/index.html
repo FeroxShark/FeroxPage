@@ -1,15 +1,21 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Personal page of Ferox, a technology enthusiast and software developer.">
         <title>Ferox</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div class="header">
             <h1 id="welcome-text" data-value="Welcome!">Welcome!</h1>
+            <div id="weather-info">
+                <h2 id="location"></h2>
+                <h3 id="temp"></h3>
+            </div>                 
         </div>
         <div class="main-content">
             <div class="about-me">
