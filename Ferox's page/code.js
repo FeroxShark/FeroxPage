@@ -114,5 +114,34 @@ function weather(latitude, longitude) {
     .catch(error => {
         console.log('Hubo un error al obtener los datos del clima: ', error);
     });
-
 }
+
+document.getElementById('chat-submit').addEventListener('click', function() {
+  var message = document.getElementById('chat-input').value;
+  // Envía el mensaje al servidor para que sea procesado por el chatbot
+  fetch('/chat', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          message: message
+      })
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Añade el mensaje del usuario y la respuesta del chatbot al área de mensajes del chat
+      var chatMessages = document.getElementById('chat-messages');
+      chatMessages.innerHTML += '<div class="user-message">' + message + '</div>';
+      chatMessages.innerHTML += '<div class="chatbot-message">' + data.response + '</div>';
+  });
+});
+
+document.getElementById('chat-input').addEventListener('input', function() {
+    var submitButton = document.getElementById('chat-submit');
+    if (this.value.length > 0) {
+        submitButton.style.backgroundColor = '#45A29E';  /* Verde fuerte cuando hay texto */
+    } else {
+        submitButton.style.backgroundColor = '#6C757D';  /* Rojo apagado cuando no hay texto */
+    }
+});
