@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Personal page of Ferox, a technology enthusiast and software developer.">
         <title>Ferox</title>
@@ -38,6 +39,71 @@
             <a href="https://t.me/ferox_shark" class="contact-icon"><i class="fab fa-telegram-plane"></i></a>
             <a href="https://github.com/FeroxShark" class="contact-icon"><i class="fab fa-github"></i></a>
         </div>
+        <div id="chat">
+            <div id="chat-messages">
+                <!-- Los mensajes del chat aparecerán aquí -->
+            </div>
+            <div>
+                <textarea id="chat-input" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <button id="chat-submit"></button>
+            </div>
+        </div>        
+        <div class="footer">
+            <p id="footer-text" data-value=""></p>
+        </div>
+        <script src="code.js"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal page of Ferox, a technology enthusiast and software developer.">
+        <title>Ferox</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="welcome-text" data-value="Welcome!">Welcome!</h1>
+            <div id="weather-info">
+                <h2 id="location"></h2>
+                <h3 id="temp"></h3>
+            </div>                 
+        </div>
+        <div class="main-content">
+            <div class="about-me">
+                <h2>About me</h2>
+                <p>A technology enthusiast and high school student, I love software development. I'm learning new technologies and applying them to solve problems. Thank you for visiting my page!</p>
+            </div>
+            <div class="content-boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="contact">
+            <a href="mailto:Sharkjuangranero@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://twitter.com/Ferox_Shark" class="contact-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/ferox_shark233/" class="contact-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/ferox_shark" class="contact-icon"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://github.com/FeroxShark" class="contact-icon"><i class="fab fa-github"></i></a>
+        </div>
+        <div id="chat">
+            <div id="chat-messages">
+                <!-- Los mensajes del chat aparecerán aquí -->
+            </div>
+            <div>
+                <textarea id="chat-input" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <button id="chat-submit"></button>
+            </div>
+        </div>        
         <div class="footer">
             <p id="footer-text" data-value=""></p>
         </div>
