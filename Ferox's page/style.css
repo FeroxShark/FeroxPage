@@ -131,6 +131,82 @@ a:-webkit-any-link {
     text-decoration: underline;
 }
 
+#chat {
+    width: 100%;
+    margin: 20px auto;
+    max-height: 100vh; /* Para que ocupe todo el alto de la pantalla si es necesario */
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    overflow: auto;
+    padding: 10px;
+    color: #202123;
+    font-family: 'Arial', sans-serif;
+}
+
+#chat-messages {
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    color: #19c37d;
+    margin: 10px 0;
+}
+
+.chatbot-message {
+    color: #715fde;
+    margin: 10px 0;
+}
+
+#chat-input {
+    width: 85%;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 3rem;
+    border: none;
+    border-radius: .75rem;
+    color: #fff;
+    background-color: transparent;
+    float: left;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-height: 48px;
+    max-height: 200px;
+    height: 312px;
+    overflow: auto;
+    resize: none;
+}
+
+#chat-submit {
+    width: 40px;
+    height: 40px;
+    background-color: #6C757D;
+    background-image: url('send.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    font-weight: bold;
+    text-indent: -9999px;
+    float: right;
+    margin-left: 10px;
+}
+
+#chat > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .footer {
     display: flex;
     justify-content: center;
@@ -177,5 +253,24 @@ a:-webkit-any-link {
     .box {
         width: 90%; /* Aumentar este valor para hacer los rectángulos más grandes */
         margin-bottom: 12px;
+    }
+}
+
+/* Consulta de medios para pantallas de hasta 600px de ancho */
+@media screen and (max-width: 600px) {
+    /* Modificando el tamaño de la fuente para los mensajes en dispositivos móviles */
+    .user-message, .chatbot-message {
+        font-size: 0.8em; /* Ajusta este valor según sea necesario */
+    }
+
+    /* Modificando el tamaño de la caja de entrada de chat en dispositivos móviles */
+    #chat-input {
+        font-size: 0.8em; /* Ajusta este valor según sea necesario */
+        height: 200px; /* Ajusta este valor según sea necesario */
+    }
+    
+    /* Ajustando el tamaño y el margen de los mensajes */
+    .user-message, .chatbot-message {
+        margin: 5px 0; /* Disminuye el margen para que los mensajes ocupen menos espacio */
     }
 }
