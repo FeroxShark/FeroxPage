@@ -13,16 +13,16 @@
     </head>
     <body>
         <div class="header">
-            <h1 id="welcome-text" data-value="Welcome!">Welcome!</h1>
+            <h1 id="welcome-text" data-value="Welcome!">Welcome!</h1> <!-- Heading for welcome text -->
             <div id="weather-info">
-                <h2 id="location"></h2>
-                <h3 id="temp"></h3>
+                <h2 id="location"></h2> <!-- Heading for location information -->
+                <h3 id="temp"></h3> <!-- Heading for temperature information -->
             </div>                 
         </div>
         <div class="main-content">
             <div class="about-me">
-                <h2>About me</h2>
-                <p>A technology enthusiast and high school student, I love software development. I'm learning new technologies and applying them to solve problems. Thank you for visiting my page!</p>
+                <h2>About me</h2> <!-- Heading for "About me" section -->
+                <p>A technology enthusiast and high school student, I love software development. I'm learning new technologies and applying them to solve problems. Thank you for visiting my page!</p> <!-- Description of the user -->
             </div>
             <div class="content-boxes">
                 <div class="box"></div>
@@ -34,24 +34,26 @@
             </div>
         </div>
         <div class="contact">
-            <a href="mailto:Sharkjuangranero@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
-            <a href="https://twitter.com/Ferox_Shark" class="contact-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/ferox_shark233/" class="contact-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://t.me/ferox_shark" class="contact-icon"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://github.com/FeroxShark" class="contact-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:Sharkjuangranero@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a> <!-- Email contact link -->
+            <a href="https://twitter.com/Ferox_Shark" class="contact-icon"><i class="fab fa-twitter"></i></a> <!-- Twitter contact link -->
+            <a href="https://www.instagram.com/ferox_shark233/" class="contact-icon"><i class="fab fa-instagram"></i></a> <!-- Instagram contact link -->
+            <a href="https://t.me/ferox_shark" class="contact-icon"><i class="fab fa-telegram-plane"></i></a> <!-- Telegram contact link -->
+            <a href="https://github.com/FeroxShark" class="contact-icon"><i class="fab fa-github"></i></a> <!-- GitHub contact link -->
         </div>
         <div id="chat">
-            <div id="chat-messages">
-                <!-- Los mensajes del chat aparecerán aquí -->
-            </div>
-            <div>
-                <textarea id="chat-input" placeholder="Escribe tu mensaje aquí..."></textarea>
-                <button id="chat-submit"></button>
-            </div>
+            <div id="spacer"></div>
+            <div id="chat-container">
+                <div id="input-group">
+                    <textarea id="chat-input" placeholder="Send a message" maxlength="140"></textarea> <!-- Input field for chat messages -->
+                    <button id="chat-submit"></button> <!-- Button to submit the chat message -->
+                </div>
+                <small id="shark-ai">SharkAI</small> <!-- AI identification -->
+            </div>            
         </div>        
         <div class="footer">
-            <p id="footer-text" data-value=""></p>
+            <p id="footer-text" data-value=""></p> <!-- Footer text -->
         </div>
-        <script src="code.js"></script>
+        <script src="code.js"></script> <!-- JavaScript code file -->
+        <script src="app.js"></script>
     </body>
 </html>
