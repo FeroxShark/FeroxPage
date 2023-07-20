@@ -33,3 +33,21 @@ One of the highlights of my page is the weather display feature. It fetches and 
 ## Behind the Scenes
 
 The backbone of this page is HTML, CSS, and JavaScript. I've harnessed the power of JavaScript to animate the text and fetch weather data, while CSS breathes life into the layout with styling. If you're interested in the nuts and bolts that make this page work, you're more than welcome to explore the code.
+
+## Setting Up
+
+To run this project, you'll need to have two environment variables set up:
+
+- `OPEN_WEATHER_API_KEY`: Your OpenWeatherMap API Key for fetching real-time weather information. You can get it from [OpenWeatherMap](https://openweathermap.org/api) after signing up.
+
+- `OPENAI_API_KEY`: Your OpenAI API Key for fetching responses from GPT-3.5-turbo. You can get it from [OpenAI](https://openai.com/) after signing up.
+
+You can set these environment variables in your system or in a `.env` file in the root directory of your project. Be sure not to commit the `.env` file to any public repository as it contains sensitive information.
+
+Please note that the OpenAI API key is used on the client side in this project for demonstration purposes, which is not recommended for production applications due to security reasons. In a production application, you should create a server that handles requests to the OpenAI API.
+
+## Feedback
+
+As this is a beta version of the page, your feedback is valuable and will help me improve the page. Feel free to share your thoughts or report bugs/issues you encounter.
+
+Happy exploring!
