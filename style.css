@@ -1,317 +1,316 @@
 /* Set up the basic styles for the page */
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: rgb(23, 23, 23);
-    color: rgb(216, 216, 216);
-    font-family: TTInterphasesProMono, monospace;
-    font-size: 0.8em;
-    background-image: url(1065762.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0px;
-    padding: 0px;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  
-  /* Style the header section */
-  .header {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: rgb(249, 248, 248);
-    text-align: center;
-    justify-content: flex-start;
-    padding: 10px;
-    border-bottom: 3px solid #A8C7FA;
-    display: inline-block;
-  }
-  
-  /* Position the weather information */
-  #weather-info {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    text-align: right;
-  }
-  
-  /* Style the location and temperature */
-  #location, #temp {
-    font-size: 1.2em;
-    color: #ffffff;
-  }
-  
-  /* Style the main heading */
-  h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-  }
-  
-  /* Set up the main content section */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(23, 23, 23);
+  color: rgb(216, 216, 216);
+  font-family: TTInterphasesProMono, monospace;
+  font-size: 0.8em;
+  background-image: url(1065762.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Style the header section */
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(249, 248, 248);
+  text-align: center;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: 3px solid #A8C7FA;
+  display: inline-block;
+}
+
+/* Position the weather information */
+#weather-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+/* Style the location and temperature */
+#location, #temp {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+/* Style the main heading */
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* Set up the main content section */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.35em;
+  padding: 20px;
+}
+
+/* Style the "about me" section */
+.about-me {
+  width: 100%;
+  text-align: left;
+}
+
+/* Style the heading within the "about me" section */
+.about-me h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Style the paragraphs within the "about me" section */
+.about-me p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+/* Set up the content boxes section */
+.content-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style the content boxes */
+.box {
+  width: 70%;
+  height: 120px;
+  background: #ccc;
+  margin: 2%;
+  border-radius: 5px;
+}
+
+/* Style the heading within the main content section */
+.main-content h2 {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 72px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Style the contact section */
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  background-color: rgb(36, 36, 36);
+  padding: 15px 0px;
+}
+
+/* Style the contact icons */
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  background-color: rgb(26, 26, 26);
+  color: #e22b2b;
+  font-size: 2.7em;
+  border-radius: 25px;
+  transition: transform 0.3s ease 0s;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Apply hover effect to the contact icons */
+.contact-icon:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+/* Style links */
+a:-webkit-any-link {
+  color: #8A2BE2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Create spacing */
+#spacer {
+  height: 20px;
+}
+
+/* Style the chat container */
+#chat {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+  max-height: 600px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the chat container and its elements */
+#chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the input group */
+#input-group {
+  display: flex;
+  width: 100%;
+}
+
+/* Style the last child of chat div */
+#chat div:last-child {
+  display: flex;
+}
+
+/* Style the chat messages */
+#chat-messages {
+  height: auto;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style the chat input area */
+#chat-input-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the chat input */
+#chat-input {
+  width: calc(100% - 50px);
+  resize: none;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the placeholder text of chat input */
+#chat-input::placeholder {
+  color: #bbb;
+}
+
+/* Style the Shark AI text */
+#shark-ai {
+  color: gray;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  margin: 5px;
+}
+
+/* Style the chat submit button */
+#chat-submit {
+  width: 40px;
+  height: 40px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  background-image: url('send.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
+}
+
+/* Apply active state to chat submit button */
+#chat-submit.active {
+  background-color: green;
+}
+
+/* Style the footer section */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(216, 216, 216);
+  padding: 5px 0px;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
   .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 1.35em;
-    padding: 20px;
+    flex-direction: row;
+    margin: auto 5%;
   }
-  
-  /* Style the "about me" section */
-  .about-me {
-    width: 100%;
-    text-align: left;
-  }
-  
-  /* Style the heading within the "about me" section */
-  .about-me h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  /* Style the paragraphs within the "about me" section */
-  .about-me p {
-    font-size: 1.2em;
-    line-height: 1.8;
-  }
-  
-  /* Set up the content boxes section */
+
+  .about-me,
   .content-boxes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: 45%;
   }
-  
-  /* Style the content boxes */
+
+  .content-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .box {
-    width: 70%;
-    height: 120px;
-    background: #ccc;
-    margin: 2%;
-    border-radius: 5px;
+    width: 46%;
   }
-  
-  /* Style the heading within the main content section */
-  .main-content h2 {
-    background-color: rgba(255, 255, 255, 0.6);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 72px;
-    display: inline-block;
+}
+
+/* Media query for medium-sized screens */
+@media screen and (max-width: 1080px) {
+  .main-content {
+    flex-direction: column;
     padding: 10px;
-    border-radius: 10px;
   }
-  
-  /* Style the contact section */
-  .contact {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 75px;
-    background-color: rgb(36, 36, 36);
-    padding: 15px 0px;
-  }
-  
-  /* Style the contact icons */
-  .contact-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 40px;
-    background-color: rgb(26, 26, 26);
-    color: #e22b2b;
-    font-size: 2.7em;
-    border-radius: 25px;
-    transition: transform 0.3s ease 0s;
-    padding: 15px;
-    transition: all 0.3s ease;
-  }
-  
-  /* Apply hover effect to the contact icons */
-  .contact-icon:hover {
-    transform: scale(1.1);
-    color: #ffffff;
-  }
-  
-  /* Style links */
-  a:-webkit-any-link {
-    color: #8A2BE2;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  /* Create spacing */
-  #spacer {
-    height: 20px;
-  }
-  
-  /* Style the chat container */
-  #chat {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 600px;
-    border-radius: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: auto;
-    max-height: 600px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Style the chat container and its elements */
-  #chat-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Style the input group */
-  #input-group {
-    display: flex;
+
+  .about-me, .content-boxes {
     width: 100%;
-  }
-  
-  /* Style the last child of chat div */
-  #chat div:last-child {
-    display: flex;
-  }
-  
-  /* Style the chat messages */
-  #chat-messages {
-    height: auto;
-    border: none;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the chat input area */
-  #chat-input-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Style the chat input */
-  #chat-input {
-    width: calc(100% - 50px);
-    resize: none;
-    background-color: rgb(36, 36, 36);
-    color: white;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    border-radius: 10px;
-    margin-right: 10px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style the placeholder text of chat input */
-  #chat-input::placeholder {
-    color: #bbb;
-  }
-  
-  /* Style the Shark AI text */
-  #shark-ai {
-    color: gray;
-    font-size: 12px;
     text-align: center;
-    display: block;
-    margin: 5px;
+    flex-direction: column;
   }
-  
-  /* Style the chat submit button */
-  #chat-submit {
-    width: 40px;
-    height: 40px;
-    background-color: darkred;
-    color: white;
-    border: none;
-    border-radius: 10%;
-    cursor: pointer;
-    background-image: url('send.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: 10px;
+
+  .box {
+    width: 90%;
+    margin-bottom: 12px;
   }
-  
-  /* Apply active state to chat submit button */
-  #chat-submit.active {
-    background-color: green;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .user-message, .chatbot-message {
+    font-size: 0.8em;
   }
-  
-  /* Style the footer section */
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(216, 216, 216);
-    padding: 5px 0px;
+
+  #chat-input {
+    font-size: 0.8em;
+    height: 200px;
   }
-  
-  /* Media query for larger screens */
-  @media screen and (min-width: 768px) {
-    .main-content {
-      flex-direction: row;
-      margin: auto 5%;
-    }
-  
-    .about-me,
-    .content-boxes {
-      width: 45%;
-    }
-  
-    .content-boxes {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
-    .box {
-      width: 46%;
-    }
+
+  .user-message, .chatbot-message {
+    margin: 5px 0;
   }
-  
-  /* Media query for medium-sized screens */
-  @media screen and (max-width: 1080px) {
-    .main-content {
-      flex-direction: column;
-      padding: 10px;
-    }
-  
-    .about-me, .content-boxes {
-      width: 100%;
-      text-align: center;
-      flex-direction: column;
-    }
-  
-    .box {
-      width: 90%;
-      margin-bottom: 12px;
-    }
-  }
-  
-  /* Media query for smaller screens */
-  @media screen and (max-width: 600px) {
-    .user-message, .chatbot-message {
-      font-size: 0.8em;
-    }
-  
-    #chat-input {
-      font-size: 0.8em;
-      height: 200px;
-    }
-  
-    .user-message, .chatbot-message {
-      margin: 5px 0;
-    }
-  }
-  
+}
