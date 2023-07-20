@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function weather(latitude, longitude) {
-        let apiKey = process.env.OPEN_WEATHER_API_KEY;
+        let apiKey = '75925d4185de598e1d4b49aa86decb9c';
         let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         fetch(url)
             .then(response => response.json())
@@ -77,37 +77,37 @@ document.addEventListener('DOMContentLoaded', () => {
     navigator.geolocation.getCurrentPosition(success, error);
 
     function sendMessage() {
-        var message = document.getElementById('chat-input').value;
-        var chatMessages = document.getElementById('chat-messages');
-        chatMessages.innerHTML += '<div><strong>User:</strong> ' + message + '</div>';
-        // Clear the input field
-        document.getElementById('chat-input').value = '';
-
-        // Fetch the AI response
-        fetch('/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                message: message
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            chatMessages.innerHTML += '<div><strong>SharkAI:</strong> ' + data.response + '</div>';
-        });
+      var message = document.getElementById('chat-input').value;
+      var chatMessages = document.getElementById('chat-messages');
+      chatMessages.innerHTML += '<div><strong>User:</strong> ' + message + '</div>';
+      // Clear the input field
+      document.getElementById('chat-input').value = '';
+    
+      // Fetch the AI response
+      fetch('http://localhost:3000/chat', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              message: message
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          chatMessages.innerHTML += '<div><strong>SharkAI:</strong> ' + data.response + '</div>';
+      });
     }
-
+    
     document.getElementById('chat-submit').addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the form from submitting normally
-        sendMessage();
+      e.preventDefault(); // Prevent the form from submitting normally
+      sendMessage();
     });
-
+    
     document.getElementById('chat-input').addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault(); // Prevent the form from submitting normally
-            sendMessage();
-        }
+      if (e.key === 'Enter') {
+          e.preventDefault(); // Prevent the form from submitting normally
+          sendMessage();
+      }
     });
 });
